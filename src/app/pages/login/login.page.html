@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col">
               <ion-item>
-                <ion-input type="email" placeholder="E-mail" class="input" ></ion-input>
+                <ion-input type="email" placeholder="E-mail" [(ngModel)]="userLogin.email" class="input" ></ion-input>
               </ion-item>
             </div>
           </div>
@@ -22,7 +22,7 @@
           <div class="row">
           <div class="col">
             <ion-item>
-              <ion-input type="password" placeholder="Senha" class="input"></ion-input>
+              <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password" class="input"></ion-input>
             </ion-item>
           </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="row">
           <div class="col">
             <ion-item>
-              <ion-button class="butao"  expand="full" >
+              <ion-button class="butao" (click)="login()" expand="full" >
                 Entrar
               </ion-button>
             </ion-item>
