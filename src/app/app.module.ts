@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
      IonicModule.forRoot(), 
      AppRoutingModule,
      AngularFireModule.initializeApp(environment.fireBase),
-     AngularFireAuthModule
+     AngularFireAuthModule,
+     AngularFirestoreModule,
     ],
   providers: [
     StatusBar,

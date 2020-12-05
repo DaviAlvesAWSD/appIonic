@@ -21,6 +21,18 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule), canActivate: [AuthGuard]
   },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'lista-compra',
+    loadChildren: () => import('./pages/lista-compra/lista-compra.module').then( m => m.ListaCompraPageModule), canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({
