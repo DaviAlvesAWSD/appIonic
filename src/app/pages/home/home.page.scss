@@ -9,10 +9,147 @@
 
     width: 100%;
     height: 65px;
-    background:#2e9e31bb ;
+    background:#4CAF50 ;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
 }
+
+.btnLogout{
+
+    width: 90px;
+    font-size: smaller;
+    margin-left:20px ;
+    margin-top: -14px;
+
+
+}
+
+.btnLogout .inc{
+
+    margin-left:10px ;
+}
+
+h1{
+
+    color:white;
+    text-align: center;
+    position: relative;
+
+    top: 18px;
+
+}
+
+
+// formatação dos botões
+.container{
+
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    text-align: center;
+
+
+}
+
+// botão "Valor da Moeda"
+.btn1{
+
+   position:relative;
+   top: 20%;
+}
+
+.btn1 a{
+
+    transition: all .1s linear 0s;
+    font-family: "Roboto", sans-serif;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    outline: 0;
+    color: white;
+    padding: 20px 100px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+  
+}
+
+
+.btn1 a:active{
+
+
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
+
+}
+
+// Botão "Lista de compras"
+.btn2{
+
+    position:relative;
+    top: 40%;
+
+}
+
+
+.btn2 a{
+
+    transition: all .1s linear 0s;
+    font-family: "Roboto", sans-serif;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 20px 95px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+   
+
+}
+
+
+.btn2 a:active{
+    
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
+
+}
+
+//Botão "Previsão do tempo"
+
+.btn3{
+
+    position: relative;
+    top: 60%;
+}
+.btn3 a{
+    
+    transition: all .1s linear 0s;
+    font-family: "Roboto", sans-serif;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 20px 90px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+   
+
+}
+
+
+
+.btn3 a:active{
+
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
+    
+}
+
 
 //Aqui começa a formatação para celular
 
@@ -29,51 +166,133 @@
 
     width: 100%;
     height: 65px;
-    background:#2e9e31bb ;
+    background:#4CAF50 ;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 
 }
 
+
+.btnLogout{
+
+    width: 90px;
+    font-size: smaller;
+    margin-left:20px ;
+    margin-top: -14px;
+
+
+}
+
+.btnLogout .inc{
+
+    margin-left:10px ;
+}
+
+
 // formatação dos botões
 .container{
 
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    text-align: center;
 
 
 }
 
-.btn{
+// botão "Valor da Moeda"
+.btn1{
 
-    
-    text-decoration: none;
+   position:relative;
+   top: 20%;
+}
+
+.btn1 a{
+
+    transition: all .1s linear 0s;
     font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
     outline: 0;
-    background: #4CAF50;
-    width: 400px;
-    border: 0;
-    padding: 30px 50px;
-    color: #FFFFFF;
-    font-size: 15px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+    color: white;
+    padding: 20px 70px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+  
+}
+
+
+.btn1 a:active{
+
+
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
 
 }
 
-.btn:hover,.btn:active,.btn:focus {
-    background: #43A047;
-  }
+// Botão "Lista de compras"
+.btn2{
 
+    position:relative;
+    top: 40%;
 
+}
 
+.btn2 a{
 
+    transition: all .1s linear 0s;
+    font-family: "Roboto", sans-serif;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 20px 65px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+   
 
+}
 
+.btn2 a:active{
+    
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
 
+}
 
+//Botão "Previsão do tempo"
 
+.btn3{
 
+    position: relative;
+    top: 60%;
+}
+.btn3 a{
+    
+    transition: all .1s linear 0s;
+    font-family: "Roboto", sans-serif;
+    word-spacing: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 20px 60px;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+   
 
+}
+
+.btn3 a:active{
+
+    background-color: rgba(90, 206, 94, 0.808);
+    border-bottom: 5px solid #2b682dfa ;
+    
+}
 
 
 }

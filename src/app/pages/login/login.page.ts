@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { User } from 'src/app/interfaces/user';
 import { AuthService } from 'src/app/services/auth.service';
@@ -18,6 +19,8 @@ export class LoginPage implements OnInit {
     private authService: AuthService,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
+    private router: Router
+  
   ) { }
 
   ngOnInit() {
@@ -28,12 +31,17 @@ export class LoginPage implements OnInit {
 
       try{
         await this.authService.login(this.userLogin);
+        await this.router.navigate(['home']);
       }catch(error) {
         console.log(error);
         this.presentToast(error.message);
       }finally
       {
         this.loading.dismiss();
+
+
+
+
       }
 
         
