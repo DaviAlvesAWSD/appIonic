@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+
   async login(){
       await this.presentLoading();
 
