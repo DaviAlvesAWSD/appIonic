@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'lista-compra',
     loadChildren: () => import('./pages/lista-compra/lista-compra.module').then( m => m.ListaCompraPageModule), canActivate: [AuthGuard]
   },
+  {
+    path: 'pagina-construcao',
+    loadChildren: () => import('./pages/pagina-construcao/pagina-construcao.module').then( m => m.PaginaConstrucaoPageModule)
+  },
 ];
 
 @NgModule({

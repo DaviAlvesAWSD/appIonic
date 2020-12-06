@@ -1,0 +1,112 @@
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.header{
+
+    width: 100%;
+    height: 65px;
+    background:#4CAF50 ;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.btnVoltar{
+
+   
+    margin-left:20px ;
+    color:white;
+
+
+}
+
+.btnVoltar .inc{
+
+    margin-left:10px ;
+    margin-top: -20px;
+    font-size: 25px;
+}
+
+.btnVoltar .inc:active{
+    
+    color:rgba(197, 195, 195, 0.801);
+
+}
+
+
+h1{
+
+    color:white;
+    text-align: center;
+    position: relative;
+
+    top: 18px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+
+    *{
+        margin:0px;
+        padding: 0px;
+    }
+
+    .header{
+
+        width: 100%;
+        height: 65px;
+        background:#4CAF50 ;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    
+    }
+
+    h1{
+
+        color:white;
+        text-align: center;
+        position: relative;
+    
+        top: 18px;
+    
+    }
+    
+    
+    
+    .btnVoltar{
+    
+        width: 90px;
+        font-size: smaller;
+        margin-left:20px ;
+        margin-top: -14px;
+    
+    
+    }
+    
+    .btnVoltar .inc{
+    
+        margin-left:10px ;
+    }
+
+
+    .aviso{
+
+        text-align: center;
+        margin-top:200px ;
+
+    }
+
+    .aviso .inc{
+        width: 90px;
+        font-size: 50px;
+    }
+
+
+
+}

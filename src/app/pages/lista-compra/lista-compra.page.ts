@@ -3,6 +3,9 @@ import { LoadingController, ToastController } from '@ionic/angular';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/interfaces/product';
 import { Subscription } from 'rxjs';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/app/interfaces/user';
+
 
 
 @Component({
@@ -15,15 +18,24 @@ export class ListaCompraPage implements OnInit {
   public products = new Array<Product>();
   private productsSubscription: Subscription;
   private loading: any;
+  public userLogin: User = {};
+  private userId: string;
+  private user: string;
 
   constructor(
     private productService: ProductService,
     private toastCtrl: ToastController,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private authService: AuthService
   ) {
-    this.productsSubscription = this.productService.getProducts().subscribe(data => {
-      this.products = data;
-    });
+
+    if(this.userId == this.userLogin['id']) {
+
+      this.productsSubscription = this.productService.getProducts().subscribe(data => {
+        this.products = data;
+      });
+
+    } 
   }
 
   ngOnInit() { }
@@ -40,6 +52,9 @@ export class ListaCompraPage implements OnInit {
       this.presentToast('Produto Excluido com sucesso');
     }catch(error){
       this.presentToast('Erro ao tentar Excluir!');
+
+      console.log(error);
+      
 
     }
   }
