@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/interfaces/product';
@@ -12,15 +11,15 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./lista-compra.page.scss'],
 })
 export class ListaCompraPage implements OnInit {
-  private loading: any;
+
   public products = new Array<Product>();
   private productsSubscription: Subscription;
+  private loading: any;
 
   constructor(
-    private authService: AuthService,
-    private loadingCtrl: LoadingController,
     private productService: ProductService,
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private loadingCtrl: LoadingController
   ) {
     this.productsSubscription = this.productService.getProducts().subscribe(data => {
       this.products = data;
@@ -33,10 +32,32 @@ export class ListaCompraPage implements OnInit {
     this.productsSubscription.unsubscribe();
   }
 
+  async deleteProduct(id: string){
+    try{
 
-  async deleteProduct(id: string) {
+      await this.productService.deleteProduct(id);
 
+      this.presentToast('Produto Excluido com sucesso');
+    }catch(error){
+      this.presentToast('Erro ao tentar Excluir!');
+
+    }
   }
+
+  // esse metodo é a caixinha de carregamento
+// enquanto o sistema confere os dados
+async presentLoading() {
+  this.loading = await this.loadingCtrl.create({ message: 'por favor, aguarde...'});
+  return this.loading.present();
+
+}
+
+// essa é a memsagem de erro.
+async presentToast(message: string) {
+  const toast = await this.toastCtrl.create({ message, duration: 2000 });
+  toast.present();
+}
+
 
  
 }

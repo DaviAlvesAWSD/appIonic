@@ -2,48 +2,44 @@ import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Product } from '../interfaces/product';
 import { map } from 'rxjs/operators';
- 
+
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  
   private productsCollection: AngularFirestoreCollection<Product>;
+  public product: Product = {};
 
-  constructor(private afs: AngularFirestore ) { 
-
-    this.productsCollection = this.afs.collection<Product>('produto')
+  constructor(private afs: AngularFirestore) {
+    this.productsCollection = this.afs.collection<Product>('Products');
   }
 
-    getProducts(){
-                                      // tmb pode ser usado
-                                      //valueChanges();
-      return this.productsCollection.snapshotChanges().pipe(
-        map(actions => {
-          return actions.map(a => {
-            const data = a.payload.doc.data();
-            const id = a.payload.doc.id;
+  getProducts() {
+    return this.productsCollection.snapshotChanges().pipe(
+      map(actions => {
+        return actions.map(a => {
+          const data = a.payload.doc.data();
+          const id = a.payload.doc.id;
 
-            return { id, ...data};
-          })
-        })
-      )
+          return { id, ...data };
+        });
+      })
+    );
+  }
 
-    }
+  addProduct(product: Product) {
+    return this.productsCollection.add(product);
+  }
 
-    addProduct(product: Product){
+  getProduct(id: string) {
+    return this.productsCollection.doc<Product>(id).valueChanges();
+  }
 
-    }
+  updateProduct(id: string, product: Product) {
+    return this.productsCollection.doc<Product>(id).update(product);
+  }
 
-    getProduct(id: string){
-
-    }
-
-    updateProduct(id: string, product: Product){
-
-    }
-
-    deleteProduct(id: string){
-
-    }
+  deleteProduct(id: string) {
+    return this.productsCollection.doc(id).delete();
+  }
 }

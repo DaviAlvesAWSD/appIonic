@@ -32,6 +32,8 @@ export class RegisterPage implements OnInit {
     try
     {
       await this.authService.register(this.userRegister);
+
+      this.presentToast("Registrado com sucesso!")
     }
     catch(error )
     {

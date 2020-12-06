@@ -1,0 +1,151 @@
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.header{
+
+    width: 100%;
+    height: 65px;
+    background:#4CAF50 ;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+.btnVoltar{
+
+   
+    margin-left:20px ;
+    color:white;
+
+
+}
+
+.btnVoltar .inc{
+
+    margin-left:10px ;
+    margin-top: -20px;
+    font-size: 25px;
+}
+
+.btnVoltar .inc:active{
+    
+    color:rgba(197, 195, 195, 0.801);
+
+}
+
+.btnProduto{
+    
+    transition: all .1s linear 0s;
+    margin: auto;
+    width: 60%;
+    height: 80px ;
+     outline: 0;
+    background: #4CAF50 ;
+    --text-align: center;
+    --border-radio:0px;
+    --webkit-transition: all 0.3 ease;
+    --transition: all 0.3 ease;
+    --cursor: pointer;
+    background-color: #4CAF50 ;
+    border-bottom: 10px solid #2b682dfa;
+
+}
+
+.btnProduto:active{
+
+     background-color: #63b366;
+    border-bottom: 5px solid #2b682dfa ;
+
+}
+
+h1{
+
+    color:white;
+    text-align: center;
+    position: relative;
+
+    top: 18px;
+
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+
+    
+    *{
+        margin:0px;
+        padding: 0px;
+    }
+
+    .header{
+
+        width: 100%;
+        height: 65px;
+        background:#4CAF50 ;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    
+    }
+
+    h1{
+
+        color:white;
+        text-align: center;
+        position: relative;
+    
+        top: 18px;
+    
+    }
+    
+    
+    
+    .btnVoltar{
+    
+        width: 90px;
+        font-size: smaller;
+        margin-left:20px ;
+        margin-top: -14px;
+    
+    
+    }
+    
+    .btnVoltar .inc{
+    
+        margin-left:10px ;
+    }
+
+
+    .formProdutos{
+        margin-top: 10px;
+    }
+
+    
+    .btnProduto{
+        margin: auto;
+        width: 80%;
+        height: 70px ;
+       outline: 0;
+       outline: 0;
+       background: #4CAF50 ;
+       --text-align: center;
+       --border-radio:0px;
+       --webkit-transition: all 0.3 ease;
+       --transition: all 0.3 ease;
+       background-color: #4CAF50 ;
+       border-bottom: 15px solid #2b682dfa;
+
+    }
+
+    .btnProduto:active{
+
+     background-color: #63b366;
+    border-bottom: 5px solid #2b682dfa ;
+
+    }
+
+}
