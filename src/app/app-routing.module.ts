@@ -35,7 +35,11 @@ const routes: Routes = [
   },
   {
     path: 'pagina-construcao',
-    loadChildren: () => import('./pages/pagina-construcao/pagina-construcao.module').then( m => m.PaginaConstrucaoPageModule)
+    loadChildren: () => import('./pages/pagina-construcao/pagina-construcao.module').then( m => m.PaginaConstrucaoPageModule), canActivate: [AuthGuard]
+  },
+  {
+    path: 'page-construcao2',
+    loadChildren: () => import('./pages/page-construcao2/page-construcao2.module').then( m => m.PageConstrucao2PageModule), canActivate: [AuthGuard]
   },
 ];
 
