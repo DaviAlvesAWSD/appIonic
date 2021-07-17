@@ -1,1 +1,4 @@
-Projeto feito para um teste durante uma entrevista de emprego
+# AppIonic
+Projeto realizado durante um teste em entrevista de emprego.
+
+ 
