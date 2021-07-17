@@ -1,4 +1,4 @@
 # AppIonic
-Projeto realizado durante um teste em entrevista de emprego.
+Projeto realizado durante um teste em uma entrevista de emprego.
 
  
